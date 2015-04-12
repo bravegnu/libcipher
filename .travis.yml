@@ -12,6 +12,9 @@ install:
 
 script: coverage run --source=libcipher setup.py test
 
+after_success:
+  - coveralls
+
 deploy:
   provider: pypi
   user: vijaykumar
